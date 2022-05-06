@@ -1,4 +1,7 @@
 const Item = () => {
-    return <div>Item</div>
+    return <div className="item">
+        Item
+        <button className="remove">Delete</button>
+    </div>
 }
 export default Item
