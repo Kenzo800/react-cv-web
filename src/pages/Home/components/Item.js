@@ -1,5 +1,6 @@
-const Item = ({ id, note, date, time, deleteData }) => {
+const Item = ({ id, note, date, time, deleteData, submittingStatus }) => {
   function deleteItem() {
+    submittingStatus.current = true
     deleteData((prev) => prev.filter((item) => item.id !== id));
   }
   return (

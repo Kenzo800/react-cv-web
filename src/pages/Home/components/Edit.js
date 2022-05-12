@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { v4 } from "uuid";
 
-const Edit = ({ add }) => {
+const Edit = ({ add, submittingStatus}) => {
   //state
   const [note, setNote] = useState("");
   const [date, setDate] = useState("");
@@ -19,6 +19,7 @@ const Edit = ({ add }) => {
   }
 
   function addItem() {
+    submittingStatus.current = true
     add((prevData) => [
       {
         id: v4(),
